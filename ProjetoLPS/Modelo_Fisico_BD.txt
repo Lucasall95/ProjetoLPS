@@ -1,0 +1,53 @@
+
+CREATE TABLE tbl_clientes (
+ id_cliente integer CONSTRAINT pk_id_cliente PRIMARY KEY,
+ nome varchar(30) NOT NULL, 
+ idade integer NOT NULL,
+ email varchar(40) NOT NULL,
+ sexo char NOT NULL,
+ CPF varchar(30) NOT NULL,
+ senha varchar(30) NOT NULL,
+ FOREIGN KEY (funcionario) REFERENCES tbl_funcionarios (id_funcionario) ON DELETE CASCADE
+);
+
+CREATE TABLE tbl_funcionarios (
+ id_funcionario integer CONSTRAINT pk_id_funcionario PRIMARY KEY,
+ nome varchar(30) NOT NULL, 
+ idade integer NOT NULL,
+ sexo char NOT NULL,
+ CPF varchar(30) NOT NULL,
+ cargo varchar(30) NOT NULL,
+ salario double NOT NULL
+);
+
+CREATE TABLE tbl_locacoes (
+ id_locacao integer CONSTRAINT pk_id_locacao PRIMARY KEY,
+ qtd_maquina integer NOT NULL,
+ finalidade varchar(30) NOT NULL,
+ tipo_maquina integer NOT NULL,
+ tamanho_maquina varchar(15) NOT NULL,
+ tempo_locacao varchar(30) NOT NULL,
+ nome varchar(30) NOT NULL,
+ data date NOT NULL,
+ descricao varchar(100) NOT NULL,
+ FOREIGN KEY (cliente) REFERENCES tbl_clientes (id_cliente) ON DELETE CASCADE
+);
+
+CREATE TABLE tbl_impressoras (
+ id_impressora integer CONSTRAINT pk_id_impressora PRIMARY KEY,
+ nome varchar(30) NOT NULL,
+ marca varchar(30) NOT NULL,
+ colorida boolean NOT NULL,
+ modelo varchar(30) NOT NULL,
+ tamanho varchar(30) NOT NULL,
+ tipo integer NOT NULL
+ FOREIGN KEY funcionario) REFERENCES tbl_funcionarios (id_funcionario) ON DELETE CASCADE
+);
+
+CREATE TABLE tbl_relatorios (
+ id_relatorio integer CONSTRAINT pk_id_relatorio PRIMARY KEY,
+ nome varchar(30) NOT NULL,
+ data date NOT NULL,
+ descricao varchar(100) NOT NULL,
+ FOREIGN KEY (funcionario) REFERENCES tbl_funcionarios (id_funcionario) ON DELETE CASCADE
+);
