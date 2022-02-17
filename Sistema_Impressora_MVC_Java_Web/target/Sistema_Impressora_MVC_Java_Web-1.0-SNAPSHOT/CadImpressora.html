@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Cadstro Impressora</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body bgcolor="#4682B4">
+        <h1 align="center">CADASTRO IMPRESSORA</h1>
+        <form action="ImpressoraServlet" method="get">
+            <table align="center">
+                <tr>
+                    <td>Id:</td>
+                    <td><input type="text" name="id"></td>
+                    <td>Nome:</td>
+                    <td><input type="text" name="nome"></td>
+                    <td>Tipo-Impressora:</td>
+                    <td><input type="text" name="tipo_impressora"></td>
+                </tr>
+                <tr>
+                    <td>Marca-Impressora:</td>
+                    <td><input type="text" name="marca_impressora"></td>
+                    <td>Modelo-Impressora:</td>
+                    <td><input type="text" name="modelo_impressora"></td>
+                    <td>Colorida:</td>
+                    <td align="left">
+                        Sim<input type="radio" name="colorida" value="true">
+                        Não<input type="radio" name="colorida" value="false">   
+                    </td>
+                </tr>
+                <tr><td colspan="8">&nbsp;</td></tr>
+                <tr>
+                    <td colspan="8" align="center"><input type="submit" name="incluir" value="Incluir">
+                       <a href="index.html" target="_self">voltar</a>
+                    </td>
+                </tr>
+            </table>
+            
+        </form>
+        
+            
+    </body>
+    
+</html>

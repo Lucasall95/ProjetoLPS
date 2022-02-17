@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Cadastro Cliente</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body bgcolor="#4682B4">
+        <h1 align="center">CADASTRO CLIENTE</h1>
+        <form action="ClienteServlet" method="get">
+            <table align="center">
+                <tr>
+                    <td>Id:</td>
+                    <td><input type="text" name="id"></td>
+                    <td>Nome:</td>
+                    <td><input type="text" name="nome"></td>
+                    <td>Idade:</td>
+                    <td><input type="text" name="idade"></td>
+                    <td>Sexo:</td>
+                    <td><select name="sexo">
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CPF:</td>
+                    <td><input type="text" name="cpf"></td>
+                    <td>Senha:</td>
+                    <td><input type="text" name="senha"></td>
+                    <td>Email:</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr><td colspan="8">&nbsp;</td></tr>
+                <tr>
+                    <td colspan="8" align="center"><input type="submit" name="incluir" value="Incluir">
+                       <a href="index.html" target="_self">voltar</a>
+                    </td>
+                </tr>
+            </table>
+            
+        </form>
+        
+            
+    </body>
+</html>
